@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The DOM is a tree structure that models the HTML where each node is an object that can be controlled with Javascript.
+
 2. What is an event?
+
+Events are things like clicks and scrolling the mouse wheel that can trigger functions if set with addEventListener.
 
 3. What is an event listener?
 
+An event listener is a function that triggers when an event is performed.
+
 4. Why would we convert a NodeList into an Array?
 
+A NodeList doesn't have methods of Arrays like push, slice, or pop.
+
 5. What is a component?
+
+A component is a specific piece of HTML that can be created by a Javascript function with specific inputs.
 
 ### Git Set up
 
