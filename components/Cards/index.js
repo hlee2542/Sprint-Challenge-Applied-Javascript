@@ -18,6 +18,8 @@
 //
 // Create a card for each of the articles and add the card to the DOM.
 
+let cardsCont = document.querySelector('.cards-container');
+
 function cardMaker(entry) {
     let card = document.createElement('div');
     card.classList.toggle('card');
@@ -43,4 +45,12 @@ function cardMaker(entry) {
     return card;
 }
 
-let cardsCont = document.querySelector('.cards-container');
+function makeArticles(topics) {
+    for (const topic in topics) {
+        topics[topic].forEach(entry => cardsCont.append(cardMaker(entry)));
+    }
+}
+
+fetch('https://lambda-times-backend.herokuapp.com/articles')
+    .then(response => response.json())
+        .then(json => makeArticles(json.articles));
